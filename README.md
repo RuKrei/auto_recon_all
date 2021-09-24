@@ -13,21 +13,18 @@ The docker image will take care of the environment.
 It will also download matlab runtime (might take some time
 initially - please be patient). Matlab runtime is necessary for 
 the hippocampal subfield segmentation.
-
-You need to have a valid freesurfer license file and point 
-the environment variable FS_LICENSE_FILE to it (please modify the Dockerfile
-accordingly)
- 
  
 # Usage:
-## Modify 3 things in the Dockerfile:
- - FS_LICENSE_FILE=path/to/freesurfer/licensefile
+## You need to have a valid freesurfer license file and copy it to the app/ directory.
+ - This can be obtained from here: https://surfer.nmr.mgh.harvard.edu/fswiki/License
+
+## Modify 2 things in the Dockerfile:
  - INPUT_DIRECTORY=path/to/input/directory/on/host/machine
  - OUTPUT_DIRECTORY=path/to/output/directory/on/host/machine
  
  
 ## Copy input files to input folder on host machine
- - Input is expected to be a 3 tesla T1 MRI sequence
+ - Input is expected to be a (3 tesla) T1 MRI sequence
  - Subfolder name becomes the subject name, so
  - - inputfolder/foobar/foo.nii results in subjectname foobar
  - the pipeline expects one of two input formats:
