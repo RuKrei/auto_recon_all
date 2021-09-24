@@ -1,4 +1,5 @@
 # Description
+
 This is a docker image including a recipy to spin up a container 
 automatically running freesurfer 7.2.0
  - recon-all
@@ -9,14 +10,14 @@ Output ($SUBJECTS_DIR) is directed to a folder on the host machine.
  
  
 # Requirements:
-The docker image will take care of the environment.
-It will also download matlab runtime (might take some time
-initially - please be patient). Matlab runtime is necessary for 
-the hippocampal subfield segmentation.
- 
-# Usage:
+
+## You need to have a working docker environment
+ - Instructions for Mac, Linux and Windows can be found here: https://docs.docker.com/desktop/
+ - Docker will take care of the environment. It will also download matlab runtime (might take some time initially - please be patient). Matlab runtime is necessary for  the hippocampal subfield segmentation.
 ## You need to have a valid freesurfer license file and copy it to the app/ directory.
  - This can be obtained from here: https://surfer.nmr.mgh.harvard.edu/fswiki/License
+
+# Usage:
 
 ## Modify 2 things in the Dockerfile:
  - INPUT_DIRECTORY=path/to/input/directory/on/host/machine
