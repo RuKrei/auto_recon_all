@@ -1,3 +1,7 @@
 license.txt
-app/input
-app/output
+app/input/*
+app/output/*
+
+# exception to the rule
+!app/input/.gitkeep
+!app/output/.gitkeep
