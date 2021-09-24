@@ -19,10 +19,10 @@ Output ($SUBJECTS_DIR) is directed to a folder on the host machine.
 
 # Usage:
 
-## Modify 2 things in the Dockerfile:
- - INPUT_DIRECTORY=path/to/input/directory/on/host/machine
- - OUTPUT_DIRECTORY=path/to/output/directory/on/host/machine
+## Modify 2 things in process_mris.sh:
+ \- v ***enter/path/to*** /auto_recon_all/app/input:/app/input
  
+ \- v ***enter/path/to*** /auto_recon_all/app/output:/app/output
  
 ## Copy input files to input folder on host machine
  - Input is expected to be a (3 tesla) T1 MRI sequence
