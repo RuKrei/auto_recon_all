@@ -31,6 +31,8 @@ print(" ")
 
 subject = args.subject
 subjects_dir = args.subjects_dir
+if subjects_dir == None:
+    subjects_dir = os.environ.get("SUBJECTS_DIR")
 
 if subjects_dir == None:
     subjects_dir = os.path.join(args.folder, "freesurfered")
